@@ -1,0 +1,289 @@
+/*****************
+ *** Custom CSS ***
+ *****************/
+
+ .list-item__thumbnail1 {
+   width: 60px;
+   height: 60px;
+   border-radius: 6px;
+   display: block;
+   margin: 0;
+ }
+
+ .back {
+    background-image: url("lib/onsen/img/count.jpg");
+    background-size: 100% 100%;
+   background-repeat: no-repeat;
+
+ }
+
+ .tabhome{
+   background-color: rgba(186, 4, 4, 0.7);
+ }
+
+ .tabtur{
+   background-color: rgba(23, 89, 16, 1);
+ }
+
+ .toolbar{
+   background-image: url("lib/onsen/img/toolbar.jpg");
+ }
+
+ .count{
+   background-color: rgba(186, 4, 4, 0);
+ }
+
+ .card24{
+   background-image: url("lib/onsen/img/weihni.jpg");
+ }
+
+ .card6{
+   background-image: url("lib/onsen/img/niko.jpg");
+ }
+
+ons-input[type=text] {
+  width: 90%;
+}
+
+ons-button[modifier=large] {
+  width: initial;
+  margin: 10px;
+}
+
+ons-splitter-side[side="left"][animation="overlay"] {
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.highlight {
+  background-color: lightyellow;
+  color: rgba(255, 0, 0, 0.7);
+}
+
+.normal {
+  background-color: white;
+  color: #000000;
+}
+
+.left-label {
+  width: 30%;
+  font-size: 16px;
+  color: #666
+}
+
+.imgstyle {
+
+    size: cover;
+    height: 90%;
+    zoom: 10%;
+    max-width: 100%;
+    overflow: auto;
+    repeat: no-repeat;
+    position: absolute;
+
+
+}
+
+
+
+/********************
+ *** Animation CSS ***
+ ********************/
+
+#tabbarPage .list {
+  background-color: grey;
+  overflow-x: hidden;
+  margin-top: -1px;
+  border-bottom: 1px solid #ccc;
+}
+
+#tabbarPage .list-item {
+  min-height: 0;
+  height: 44px;
+  background-color: white;
+  margin: 1px 0 -1px 0;
+}
+
+#tabbarPage .list-item--material {
+  height: 56px;
+}
+
+.list-title {
+  margin-top: 12px;
+}
+
+.hide-children * {
+  overflow: hidden;
+}
+
+.animation-swipe-right {
+  pointer-events: none;
+  -webkit-animation: swipe-right .9s ease-in-out forwards;
+          animation: swipe-right .9s ease-in-out forwards;
+}
+
+.animation-swipe-left {
+  pointer-events: none;
+  -webkit-animation: swipe-left .9s ease-in-out forwards;
+          animation: swipe-left .9s ease-in-out forwards;
+}
+
+.animation-remove {
+  pointer-events: none;
+  -webkit-animation: remove .7s ease-in-out forwards;
+          animation: remove .7s ease-in-out forwards;
+}
+
+@-webkit-keyframes swipe-right {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  10% {
+    -webkit-transform: translateX(-3%);
+            transform: translateX(-3%);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    height: 0;
+    opacity: 0.3;
+  }
+}
+
+@keyframes swipe-right {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  10% {
+    -webkit-transform: translateX(-3%);
+            transform: translateX(-3%);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    height: 0;
+    opacity: 0.3;
+  }
+}
+
+@-webkit-keyframes swipe-left {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  10% {
+    -webkit-transform: translateX(3%);
+            transform: translateX(3%);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    height: 0;
+    opacity: 0.3;
+  }
+}
+
+@keyframes swipe-left {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  10% {
+    -webkit-transform: translateX(3%);
+            transform: translateX(3%);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    height: 0;
+    opacity: 0.3;
+  }
+}
+
+@-webkit-keyframes remove {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.1;
+    height: 0;
+  }
+}
+
+@keyframes remove {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.1;
+    height: 0;
+  }
+}
+
+.my-icon {
+    background-image: url("falling.png");
+    width: 35px;
+    height: 70%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 6px;
+}
+
+.my-icon:active {
+    background-image: url("falling.png");
+}
+
+@font-face {
+  font-family: 'afi';
+  src: url('lib/onsen/font/afi.woff2') format('woff2'),
+       url('lib/onsen/font/afi.woff') format('woff'),
+       url('lib/onsen/font/afi.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'march';
+  src: url('lib/onsen/font/march.woff2') format('woff2'),
+       url('lib/onsen/font/march.woff') format('woff'),
+       url('lib/onsen/font/march.ttf') format('truetype');
+}
+
+
+
+
+body { background-color:#333; }
+#snow{
+	background: none;
+	font-family: 'Roboto', 'Noto', sans-serif;
+	background-image: url('lib/onsen/img/s1.png'), url('lib/onsen/img/s2.png'), url('lib/onsen/img/s3.png');
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index:1;
+	-webkit-animation: snow 10s linear infinite;
+	-moz-animation: snow 10s linear infinite;
+	-ms-animation: snow 10s linear infinite;
+	animation: snow 10s linear infinite;
+}
+@keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}
+@-moz-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 400px 1000px, 200px 400px, 100px 300px;}
+}
+@-webkit-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}
+@-ms-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}
