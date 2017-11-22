@@ -16,18 +16,6 @@ window.fn.loadLink = function (url) {
   window.open(url, '_blank');
 };
 
-ons.ready(function(){
-    ons.disableDeviceBackButtonHandler();
-    window.document.addEventListener('backbutton', function() {
-        console.log('back');
-       if (document.getElementById('appNavigator').pages.length > 1) {
-           document.getElementById('appNavigator').popPage();
-       } else {
-           menu.toggle();
-       }
-    }, false);
-});
-
 window.fn.pushPage = function (page, year, month, day, title) {
 	  datum = new Date();
 	  var hday = datum.getDate();
