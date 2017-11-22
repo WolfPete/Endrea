@@ -21,7 +21,7 @@ window.fn.pushPage = function (page, year, month, day, title) {
 	  var hday = datum.getDate();
 	  var hmonth = datum.getMonth() + 1 ;
     var hyear = datum.getFullYear();
-if( hyear == '2017'  && hmonth == '11' || hyear == '2017'  && hmonth == '12' && day > hday )
+/*if( hyear == '2017'  && hmonth == '11' || hyear == '2017'  && hmonth == '12' && day > hday )
 {
   play('msg');
 ons.notification.alert({
@@ -30,13 +30,13 @@ ons.notification.alert({
 	}
 	);
 }
-else {
+else {*/
 if (title){
     play(title);
   }
     document.getElementById('appNavigator').pushPage(page.id, { data: { title: page.title }});
   }
-}
+//}
   var audio1 = new Audio('lib/onsen/mp3/m5.mp3');
 
   function play(title)
