@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Endrea</title>
+
+  <script src="lib/onsen/js/onsenui.js"></script>
+  <script src="js/app.js"></script>
+
+
+  <link rel="stylesheet" href="lib/onsen/css/onsenui.css">
+  <link rel="stylesheet" href="lib/onsen/css/onsen-css-components.css">
+  <link rel="stylesheet" href="style.css">
+
+<link rel="shortcut icon" href="lib/onsen/img/favicon.ico">
+<link rel="icon" type="image/png" href="lib/onsen/img/favicon.png" sizes="32x32">
+<link rel="icon" type="image/png" href="lib/onsen/img/favicon.png" sizes="96x96">
+
+<icon src="lib/onsen/img/icon.png" platform="ios" width="180" height="180" />
+<icon src="lib/onsen/img/hdpi.png" platform="android" qualifier="hdpi" />
+<icon src="lib/onsen/img/xhdpi.png" platform="android" qualifier="xhdpi" />
+<icon src="lib/onsen/img/xxhdpi.png" platform="android" qualifier="xxhdpi" />
+<icon src="lib/onsen/img/xxxhdpi.png" platform="android" qualifier="xxxhdpi" />
+<icon src="lib/onsen/img/fr-xxhdpi.png" platform="android" qualifier="fr-xxhdpi" />
+
+
+</head>
+
+<body>
+  <div id="snow">
+<ons-navigator id="appNavigator" swipeable swipe-target-width="80px">
+  <ons-page>
+    <ons-splitter id="appSplitter">
+      <ons-splitter-content page="tabbar.html"></ons-splitter-content>
+    </ons-splitter>
+  </ons-page>
+</ons-navigator>
+
+<template id="tabbar.html">
+  <ons-page id="tabbar-page">
+    <ons-toolbar class="tabhome">
+      <div class="left">
+        </div>
+
+      <div class="center">
+        <ons-icon size="30px" spin icon="ion-ios-snowy"></ons-icon>
+        <font size="5px" face="march">Endi's Santa</font>
+        </div>
+
+    </ons-toolbar>
+    <ons-tabbar swipeable id="appTabbar" position="auto">
+      <ons-tab class="tabhome" label="Kalender" icon="fa-tree" page="home.html" active onclick="mute('tab2')" ></ons-tab>
+	 <ons-tab class="tabhome" label="Wann ist Wollenacht" icon="fa-ravelry" page="count.html" onclick="play('tab2')"></ons-tab>
+    </ons-tabbar>
+  </ons-page>
+</template>
+
+<template id="home.html">
+  <ons-page id="snow">
+    <script>
+    var startaudio = new Audio('lib/onsen/mp3/start.mp3');
+    startaudio.play();
+    </script>
+    <ons-card onclick="fn.pushPage({'id': '1.html', 'title': '1', }, 2017, 12, 1, 'm1')">
+      <ons-list-item modifier="nodivider">
+        <div class="center">
+          <img class="list-item__thumbnail1" src="lib/onsen/img/1.png">
+        </div>
+        <div class="center">
+          <span class="list-item__title">Iss-ein-roter-Apfel Tag</span>
+        </div>
+      </ons-list-item>
+	</ons-card>
+
+    <ons-card onclick="fn.pushPage({'id': '2.html', 'title': '2'} , 2017 , 12 , 2, 'm2')">
+      <ons-list-item modifier="nodivider">
+        <div class="left">
+          <img class="list-item__thumbnail1" src="lib/onsen/img/2.png">
+        </div>
+        <div class="center">
+          <span class="list-item__title">Tag des Sicherheitsrasierers</span>
+        </div>
+      </ons-list-item>
+    </ons-card>
+
+	<ons-card onclick="fn.pushPage({'id': '3.html', 'title': '3'}, 2017, 12, 3, 'm3')">
+    <ons-list-item modifier="nodivider">
+      <div class="left">
+        <img class="list-item__thumbnail1" src="lib/onsen/img/3.png">
+      </div>
+      <div class="center">
+        <span class="list-item__title">Nationaler-Dach-über-dem-Kopf Tag</span>
+      </div>
+    </ons-list-item>
+	</ons-card>
+
+	<ons-card onclick="fn.pushPage({'id': '4.html', 'title': '4'}, 2017, 12, 4, 'm4')">
+    <ons-list-item modifier="nodivider">
+      <div class="left">
+        <img class="list-item__thumbnail1" src="lib/onsen/img/4.png">
+      </div>
+      <div class="center">
+        <span class="list-item__title">Tag der Socke</span>
+      </div>
+    </ons-list-item>
+    </ons-card>
+
+	<ons-card onclick="fn.pushPage({'id': '5.html', 'title': '5'}, 2017, 12, 5, 'm5')">
+    <ons-list-item modifier="nodivider">
+      <div class="left">
+        <img class="list-item__thumbnail1" src="lib/onsen/img/5.png">
+      </div>
+      <div class="center">
+        <span class="list-item__title">Badewannen-Party Tag</span>
+      </div>
+    </ons-list-item>
+    </ons-card>
+
+	<ons-card onclick="fn.pushPage({'id': '6.html', 'title': '6'}, 2017, 12, 6, 'm6')" class="card6">
+    <ons-list-item modifier="nodivider">
+      <div class="left">
+        <img class="list-item__thumbnail1" src="lib/onsen/img/6.png">
+      </div>
+      <div class="center">
+        <span class="list-item__title">Zieh-deine-eigenen-Schuhe-an Tag</span>
+      </div>
+    </ons-list-item>
+	</ons-card>
+
+	<ons-card onclick="fn.pushPage({'id': '7.html', 'title': '7'}, 2017, 12, 7, 'm7')">
+    <ons-list-item modifier="nodivider">
+      <div class="left">
+        <img class="list-item__thumbnail1" src="lib/onsen/img/7.png">
+      </div>
+      <div class="center">
+        <span class="list-item__title">Tag der Internationalen Zivilluftfahrt</span>
+      </div>
+    </ons-list-item>
+	</ons-card>
+
+  <ons-card onclick="fn.pushPage({'id': '8.html', 'title': '8'}, 2017, 12, 8, 'm8')">
+    <ons-list-item modifier="nodivider">
+      <div class="left">
+        <img class="list-item__thumbnail1" src="lib/onsen/img/8.png">
+      </div>
+      <div class="center">
+        <span class="list-item__title">Gib-vor-ein-Zeitreisender-zu-sein Tag</span>
+      </div>
+    </ons-list-item>
+	</ons-card>
+
+  <ons-card onclick="fn.pushPage({'id': '9.html', 'title': '9'}, 2017, 12, 9, 'm9')">
+    <ons-list-item modifier="nodivider">
+      <div class="left">
+        <img class="list-item__thumbnail1" src="lib/onsen/img/9.png">
+      </div>
+      <div class="center">
+        <span class="list-item__title">Tag der Weihnachtskarte</span>
+      </div>
+    </ons-list-item>
+	</ons-card>
+
+  <ons-card onclick="fn.pushPage({'id': '10.html', 'title': '10'}, 2017, 12, 10, 'm10')">
+    <ons-list-item modifier="nodivider">
+      <div class="left">
+        <img class="list-item__thumbnail1" src="lib/onsen/img/10.png">
+      </div>
+      <div class="center">
+        <span class="list-item__title">Tag der Lebkuchen-Dekoration</span>
+      </div>
+    </ons-list-item>
+  </ons-card>
+
+  <ons-card onclick="fn.pushPage({'id': '11.html', 'title': '11', }, 2017, 12, 11, 'm11')">
+    <ons-list-item modifier="nodivider">
+      <div class="left">
+        <img class="list-item__thumbnail1" src="lib/onsen/img/11.png">
+      </div>
+      <div class="center">
+        <span class="list-item__title">Internationaler Tag der Berge</span>
+      </div>
+    </ons-list-item>
+</ons-card>
+
+  <ons-card onclick="fn.pushPage({'id': '12.html', 'title': '12'} , 2017 , 12 , 12, 'm12')">
+    <ons-list-item modifier="nodivider">
+      <div class="left">
+        <img class="list-item__thumbnail1" src="lib/onsen/img/12.png">
+      </div>
+      <div class="center">
+        <span class="list-item__title">Tag des Weihnachtssterns</span>
+      </div>
+    </ons-list-item>
+  </ons-card>
+
+<ons-card onclick="fn.pushPage({'id': '13.html', 'title': '13'}, 2017, 12, 13, 'schneit')">
+  <ons-list-item modifier="nodivider">
+    <div class="left">
+      <img class="list-item__thumbnail1" src="lib/onsen/img/13.png">
+    </div>
+    <div class="center">
+      <span class="list-item__title">Tag der Seeleute</span>
+    </div>
+  </ons-list-item>
+</ons-card>
+
+<ons-card onclick="fn.pushPage({'id': '14.html', 'title': '14'}, 2017, 12, 14, 'm14')">
+  <ons-list-item modifier="nodivider">
+    <div class="left">
+      <img class="list-item__thumbnail1" src="lib/onsen/img/14.png">
+    </div>
+    <div class="center">
+      <span class="list-item__title">Affentag</span>
+    </div>
+  </ons-list-item>
+  </ons-card>
+
+<ons-card onclick="fn.pushPage({'id': '15.html', 'title': '15'}, 2017, 12, 15, 'm15')">
+  <ons-list-item modifier="nodivider">
+    <div class="left">
+      <img class="list-item__thumbnail1" src="lib/onsen/img/15.png">
+    </div>
+    <div class="center">
+      <span class="list-item__title">Internationaler Tee Tag</span>
+    </div>
+  </ons-list-item>
+  </ons-card>
+
+<ons-card onclick="fn.pushPage({'id': '16.html', 'title': '16'}, 2017, 12, 16, 'm16')">
+  <ons-list-item modifier="nodivider">
+    <div class="left">
+      <img class="list-item__thumbnail1" src="lib/onsen/img/16.png">
+    </div>
+    <div class="center">
+      <span class="list-item__title">Tag der hässlichen Weihnachtspullover</span>
+    </div>
+  </ons-list-item>
+</ons-card>
+
+<ons-card onclick="fn.pushPage({'id': '17.html', 'title': '17'}, 2017, 12, 17, 'm17')">
+  <ons-list-item modifier="nodivider">
+    <div class="left">
+      <img class="list-item__thumbnail1" src="lib/onsen/img/17.png">
+    </div>
+    <div class="center">
+      <span class="list-item__title">Tag des Ahornsirup</span>
+    </div>
+  </ons-list-item>
+</ons-card>
+
+<ons-card onclick="fn.pushPage({'id': '18.html', 'title': '18'}, 2017, 12, 18, 'backenl')">
+  <ons-list-item modifier="nodivider">
+    <div class="left">
+      <img class="list-item__thumbnail1" src="lib/onsen/img/18.png">
+    </div>
+    <div class="center">
+      <span class="list-item__title">Back-Plätzchen Tag</span>
+    </div>
+  </ons-list-item>
+</ons-card>
+
+<ons-card onclick="fn.pushPage({'id': '19.html', 'title': '19'}, 2017, 12, 19, 'pflaume')">
+  <ons-list-item modifier="nodivider">
+    <div class="left">
+      <img class="list-item__thumbnail1" src="lib/onsen/img/19.png">
+    </div>
+    <div class="center">
+      <span class="list-item__title">Such-einen-Weihnachtsbaum Tag</span>
+    </div>
+  </ons-list-item>
+</ons-card>
+
+<ons-card onclick="fn.pushPage({'id': '20.html', 'title': '20'}, 2017, 12, 20, 'm20')">
+  <ons-list-item modifier="nodivider">
+    <div class="left">
+      <img class="list-item__thumbnail1" src="lib/onsen/img/20.png">
+    </div>
+    <div class="center">
+      <span class="list-item__title">Sangria Tag</span>
+    </div>
+  </ons-list-item>
+</ons-card>
+
+<ons-card onclick="fn.pushPage({'id': '21.html', 'title': '21', }, 2017, 12, 21, 'm21')">
+  <ons-list-item modifier="nodivider">
+    <div class="left">
+      <img class="list-item__thumbnail1" src="lib/onsen/img/21.png">
+    </div>
+    <div class="center">
+      <span class="list-item__title">Tag der Taschenlampe</span>
+    </div>
+  </ons-list-item>
+</ons-card>
+
+<ons-card onclick="fn.pushPage({'id': '22.html', 'title': '22'} , 2017 , 12 , 22, 'm22')">
+  <ons-list-item modifier="nodivider">
+    <div class="left">
+      <img class="list-item__thumbnail1" src="lib/onsen/img/22.png">
+    </div>
+    <div class="center">
+      <span class="list-item__title">Tag der Vorväter</span>
+    </div>
+  </ons-list-item>
+</ons-card>
+
+<ons-card onclick="fn.pushPage({'id': '23.html', 'title': '23'}, 2017, 12, 23, 'm23')">
+<ons-list-item modifier="nodivider">
+  <div class="left">
+    <img class="list-item__thumbnail1" src="lib/onsen/img/23.png">
+  </div>
+  <div class="center">
+    <span class="list-item__title">Tag der Radieschen</span>
+  </div>
+</ons-list-item>
+</ons-card>
+
+<ons-card onclick="fn.pushPage({'id': '24.html', 'title': '24'}, 2017, 12, 24, 'm24')"  class="card24">
+<ons-list-item modifier="nodivider">
+  <div class="left">
+    <img class="list-item__thumbnail1" src="lib/onsen/img/24.png">
+  </div>
+  <div class="center">
+    <span class="list-item__title" style="color: white">Tag des Eierflips</span>
+  </div>
+</ons-list-item>
+</ons-card>
+
+
+    </ons-page>
+</template>
+
+
+<template id="count.html">
+  <ons-page >
+    <ons-carousel fullscreen swipeable auto-scroll overscrollable id="carousel">
+   <ons-carousel-item class="back">
+     <div style="text-align: center; font-size: 30px; margin-top: 20px; color: #fff;" id="snow">
+       <font face="march" size="20px" id="tage"></font>
+       <br>
+        <font face="march" size="20px" id="demo"></font>
+     </div>
+   </ons-carousel-item>
+ </ons-carousel>
+  <script>
+// Set the date we're counting down to
+var countDownDate = new Date("Dec 24, 2017 00:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+    // Get todays date and time
+    var now = new Date().getTime();
+
+    // Find the distance between now an the count down date
+    var distance = countDownDate - now;
+
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Output the result in an element with id="demo"
+      document.getElementById("tage").innerHTML = days + "Tage ";
+    document.getElementById("demo").innerHTML =  hours + "h "
+    + minutes + "min " + seconds + "sec";
+
+    // If the count down is over, write some text
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("tage").innerHTML = "Fröhliche";
+        document.getElementById("demo").innerHTML = "Wollenacht";
+    }
+}, 1000);
+</script>
+  </ons-page>
+</template>
+
+
+
+
+<template id="1.html">
+  <ons-page>
+    <div id="snow">
+          <div class="left" >
+            <ons-back-button onclick="mute('m1')">Zurück</ons-back-button>
+            <font size="3px" color="white" >1. Türchen</font>
+            <ons-icon size="30px" icon="fa-gift" style="color: white"></ons-icon>
+          </div>
+            </div>
+
+  <img src="lib/onsen/img/s1.jpg"  class ="imgstyle" style="height: 100%; width: 100%">
+  </div>
+  </ons-page>
+</template>
+
+<template id="2.html">
+  <ons-page>
+      <div id="snow">
+            <div class="left" >
+              <ons-back-button onclick="mute('m2')">Zurück</ons-back-button>
+              <font size="3px" color="white" >2. Türchen</font>
+              <ons-icon size="30px" icon="fa-gift" style="color: white"></ons-icon>
+            </div>
+              </div>
+
+  <img src="lib/onsen/img/s2.jpg"  class ="imgstyle" style="height: 100%; width: 100%">
+  </ons-page>
+</template>
+
+<template id="3.html">
+  <ons-page>
+<div id="snow">
+      <div class="left" >
+        <ons-back-button onclick="mute('m3')">Zurück</ons-back-button>
+        <font size="3px" color="white" >3. Türchen</font>
+        <ons-icon size="30px" icon="fa-gift" style="color: white"></ons-icon>
+      </div>
+        </div>
+
+  <img src="lib/onsen/img/s3.jpg"  class ="imgstyle" style="height: 100%; width: 100%">
+
+  </ons-page>
+</template>
+
+<template id="4.html">
+  <ons-page>
+      <div id="snow">
+            <div class="left" >
+              <ons-back-button onclick="mute('m4')">Zurück</ons-back-button>
+              <font size="3px" color="white" >4. Türchen</font>
+              <ons-icon size="30px" icon="fa-gift" style="color: white"></ons-icon>
+            </div>
+              </div>
+
+  <img src="lib/onsen/img/s4.gif"  class ="imgstyle" style="height: 100%; width: 100%">
+  </ons-page>
+</template>
+
+<template id="5.html">
+  <ons-page>
+      <div id="snow">
+            <div class="left" >
+              <ons-back-button onclick="mute('m5')">Zurück</ons-back-button>
+              <font size="3px" color="white" >5. Türchen</font>
+              <ons-icon size="30px" icon="fa-gift" style="color: white"></ons-icon>
+            </div>
+              </div>
+
+  <img src="lib/onsen/img/s5.gif"  class ="imgstyle" style="height: 100%; width: 100%">
+  </ons-page>
+</template>
+
+<template id="6.html">
+  <ons-page>
+    <div id="snow">
+          <div class="left" >
+            <ons-back-button onclick="mute('m6')">Zurück</ons-back-button>
+            <font size="3px" color="white" >6. Türchen</font>
+            <ons-icon size="30px" icon="fa-gift" style="color: white"></ons-icon>
+          </div>
+            </div>
+  <img src="lib/onsen/img/s6.jpg"  class ="imgstyle" style="height: 100%; width: 100%">
+  </ons-page>
+</template>
+
+<template id="7.html">
+  <ons-page>
+      <div id="snow">
+            <div class="left" >
+              <ons-back-button onclick="mute('m7')">Zurück</ons-back-button>
+              <font size="3px" color="white" >7. Türchen</font>
+              <ons-icon size="30px" icon="fa-gift" style="color: white"></ons-icon>
+            </div>
+              </div>
+
+  <img src="lib/onsen/img/s7.gif"  class ="imgstyle" style="height: 100%; width: 100%">
+  </ons-page>
+</template>
+
+<template id="8.html">
+  <ons-page>
+      <div id="snow">
+            <div class="left" >
+              <ons-back-button onclick="mute('m8')">Zurück</ons-back-button>
+              <font size="3px" color="white" >8. Türchen</font>
+              <ons-icon size="30px" icon="fa-gift" style="color: white"></ons-icon>
+            </div>
+              </div>
+
+  <img src="lib/onsen/img/s8.jpg"  class ="imgstyle" style="height: 100%; width: 100%">
+  </ons-page>
+</template>
+
+<template id="9.html">
+  <ons-page>
+      <div id="snow">
+            <div class="left" >
+              <ons-back-button onclick="mute('m9')">Zurück</ons-back-button>
+              <font size="3px" color="white" >9. Türchen</font>
+              <ons-icon size="30px" icon="fa-gift" style="color: white"></ons-icon>
+            </div>
+              </div>
+
+  <img src="lib/onsen/img/s9.gif"  class ="imgstyle" style="height: 100%; width: 100%">
+  </ons-page>
+</template>
+
+<template id="10.html">
+  <ons-page>
+      <div id="snow">
+            <div class="left" >
+              <ons-back-button onclick="mute('m10')">Zurück</ons-back-button>
+              <font size="3px" color="white" >10. Türchen</font>
+              <ons-icon size="30px" icon="fa-gift" style="color: white"></ons-icon>
+            </div>
+              </div>
+
+  <img src="lib/onsen/img/wolle.jpg"  class ="imgstyle" style="height: 100%; width: 100%">
+  </ons-page>
+</template>
+
+<template id="11.html">
+  <ons-page>
+      <div id="snow">
+            <div class="left" >
+              <ons-back-button onclick="mute('m11')">Zurück</ons-back-button>
+              <font size="3px" color="white" >11. Türchen</font>
+              <ons-icon size="30px" icon="fa-gift" style="color: white"></ons-icon>
+            </div>
+              </div>
+
+  <img src="lib/onsen/img/s11.jpg"  class ="imgstyle" style="height: 100%; width: 100%">
+  </ons-page>
+</template>
+
+<template id="12.html">
+  <ons-page>
+      <div id="snow">
+            <div class="left" >
+              <ons-back-button onclick="mute('m12')">Zurück</ons-back-button>
+              <font size="3px" color="white" >12. Türchen</font>
+              <ons-icon size="30px" icon="fa-gift" style="color: white"></ons-icon>
+            </div>
+              </div>
+
+  <img src="lib/onsen/img/s12.jpg"  class ="imgstyle" style="height: 100%; width: 100%">
+  </ons-page>
+</template>
+
+<template id="13.html">
+  <ons-page>
+      <div id="snow">
+            <div class="left" >
+              <ons-back-button onclick="mute('m13')">Zurück</ons-back-button>
+              <font size="3px" color="white" >13. Türchen</font>
+              <ons-icon size="30px" icon="fa-gift" style="color: white"></ons-icon>
+            </div>
+              </div>
+
+  <img src="lib/onsen/img/s13.jpg"  class ="imgstyle" style="height: 100%; width: 100%">
+  </ons-page>
+</template>
+
+<template id="14.html">
+  <ons-page>
+    <ons-toolbar>
+      <div id="snow">
+            <div class="left" >
+              <ons-back-button onclick="mute('m14')">Zurück</ons-back-button>
+              <font size="3px" color="white" >14. Türchen</font>
+              <ons-icon size="30px" icon="fa-gift" style="color: white"></ons-icon>
+            </div>
+              </div>
+    </ons-toolbar>
+
+  <img src="lib/onsen/img/s14.gif"  class ="imgstyle" style="height: 100%;width: 100%">
+  </ons-page>
+</template>
+
+<template id="15.html">
+  <ons-page>
+      <div id="snow">
+            <div class="left" >
+              <ons-back-button onclick="mute('m15')">Zurück</ons-back-button>
+              <font size="3px" color="white" >15. Türchen</font>
+              <ons-icon size="30px" icon="fa-gift" style="color: white"></ons-icon>
+            </div>
+              </div>
+
+  <img src="lib/onsen/img/s15.jpg" class ="imgstyle" style="height: 100%; width: 100%">
+  </ons-page>
+</template>
+
+<template id="16.html">
+  <ons-page>
+      <div id="snow">
+            <div class="left" >
+              <ons-back-button onclick="mute('m16')">Zurück</ons-back-button>
+              <font size="3px" color="#BD0205" >16.Türchen</font>
+              <ons-icon size="30px" icon="fa-gift" style="color: #BD0205"></ons-icon>
+            </div>
+              </div>
+
+  <img src="lib/onsen/img/s16.jpg"   class ="imgstyle" style="height: 100%; width: 100%">
+  </ons-page>
+</template>
+
+<template id="17.html">
+  <ons-page>
+      <div id="snow">
+            <div class="left" >
+              <ons-back-button onclick="mute('m17')">Zurück</ons-back-button>
+              <font size="3px" color="white" >17. Türchen</font>
+              <ons-icon size="30px" icon="fa-gift" style="color: white"></ons-icon>
+            </div>
+              </div>
+
+  <img src="lib/onsen/img/s17.jpg"  class ="imgstyle" style="height: 100%; width: 100%">
+  </ons-page>
+</template>
+
+<template id="18.html">
+  <ons-page>
+      <div id="snow">
+            <div class="left" >
+              <ons-back-button onclick="mute('m18')">Zurück</ons-back-button>
+              <font size="3px" color="white" >18. Türchen</font>
+              <ons-icon size="30px" icon="fa-gift" style="color: white"></ons-icon>
+            </div>
+              </div>
+
+  <img src="lib/onsen/img/s18.jpg"  class ="imgstyle" style="height: 100%; width: 100%">
+  </ons-page>
+</template>
+
+<template id="19.html">
+  <ons-page>
+    <ons-toolbar>
+      <div id="snow">
+            <div class="left" >
+              <ons-back-button onclick="mute('m19')">Zurück</ons-back-button>
+              <font size="3px" color="white" >19. Türchen</font>
+              <ons-icon size="30px" icon="fa-gift" style="color: white"></ons-icon>
+            </div>
+              </div>
+            </ons-toolbar>
+
+  <img src="lib/onsen/img/s19.jpg"   class ="imgstyle" style="height: 100%; width: 100%">
+  </ons-page>
+</template>
+
+<template id="20.html">
+  <ons-page>
+      <div id="snow">
+            <div class="left" >
+              <ons-back-button onclick="mute('m20')">Zurück</ons-back-button>
+              <font size="3px" style="color: #e10a0a" >20. Türchen</font>
+              <ons-icon size="30px" icon="fa-gift" style="color: #e10a0a"></ons-icon>
+            </div>
+              </div>
+
+  <img src="lib/onsen/img/s20.jpg"   class ="imgstyle" style="height: 100%; width: 100%">
+  </ons-page>
+</template>
+
+<template id="21.html">
+  <ons-page>
+      <div id="snow">
+            <div class="left" >
+              <ons-back-button onclick="mute('m21')">Zurück</ons-back-button>
+              <font size="3px" color="white" >21. Türchen</font>
+              <ons-icon size="30px" icon="fa-gift" style="color: white"></ons-icon>
+            </div>
+              </div>
+
+  <img src="lib/onsen/img/s21.gif" class ="imgstyle" style="height: 100%; width: 100%">
+  </ons-page>
+</template>
+
+<template id="22.html">
+  <ons-page>
+
+      <div id="snow">
+            <div class="left" >
+              <ons-back-button onclick="mute('m22')">Zurück</ons-back-button>
+              <font size="3px" color="white" >22. Türchen</font>
+              <ons-icon size="30px" icon="fa-gift" style="color: white"></ons-icon>
+            </div>
+              </div>
+
+
+  <img src="lib/onsen/img/harald.jpg"  class ="imgstyle" style="height: 100%; width: 100%">
+  </ons-page>
+</template>
+
+<template id="23.html">
+  <ons-page>
+      <div id="snow">
+            <div class="left" >
+              <ons-back-button onclick="mute('m23')">Zurück</ons-back-button>
+              <font size="3px" color="white" >23. Türchen</font>
+              <ons-icon size="30px" icon="fa-gift" style="color: white"></ons-icon>
+            </div>
+              </div>
+
+  <img src="lib/onsen/img/s23.jpg"  class ="imgstyle" style="height: 100%; width: 100%">
+  </ons-page>
+</template>
+
+<template id="24.html">
+  <ons-page>
+      <div id="snow">
+            <div class="left" >
+              <ons-back-button onclick="mute('m24')">Zurück</ons-back-button>
+              <font size="3px" color="white" >24. Türchen</font>
+              <ons-icon size="30px" icon="fa-gift" style="color: white"></ons-icon>
+            </div>
+              </div>
+
+  <img src="lib/onsen/img/s24.gif"  class ="imgstyle" style="height: 100%; width: 100%">
+  </ons-page>
+</template>
+</div>
+
+
+
+</body>
+
+</html>
